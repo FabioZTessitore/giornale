@@ -1,6 +1,7 @@
 /* main.c */
 
 #include <stdio.h>
+#include "giornale.h"
 #include "pagina.h"
 #include "articolo.h"
 
@@ -10,10 +11,15 @@ int main()
   Articolo a2 = articolo_make("Titolo 2", "Testo 2");
 
   Pagina p = pagina_make();
+
+  Giornale g = giornale_make("GitHub Journal");
+  
   pagina_inserisciArticolo(&p, &a1);
   pagina_inserisciArticolo(&p, &a2);
 
-  pagina_dump(&p);
+  giornale_inserisciPagina(&g, &p);
+
+  giornale_dump(&g);
 
   return 0;
 }

@@ -22,12 +22,8 @@ void articolo_dump(const Articolo * const unArticolo)
   putchar('\n');
 }
 
-const char *articolo_getTitolo(const Articolo * const unArticolo)
+void articolo_copy(Articolo * const dstArticolo, const Articolo * const srcArticolo)
 {
-  return unArticolo->titolo;
-}
-
-const char *articolo_getTesto(const Articolo * const unArticolo)
-{
-  return unArticolo->testo;
+  strSafeCopy(dstArticolo->titolo, srcArticolo->titolo, ARTICOLO_TITOLO_MAX_LEN);
+  strSafeCopy(dstArticolo->testo, srcArticolo->testo, ARTICOLO_TESTO_MAX_LEN);
 }
