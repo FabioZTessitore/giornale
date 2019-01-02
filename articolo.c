@@ -21,3 +21,13 @@ void articolo_dump(const Articolo * const unArticolo)
   puts(unArticolo->testo);
   putchar('\n');
 }
+
+char *articolo_getTitolo(const Articolo * const unArticolo)
+{
+  return unArticolo->titolo;
+}
+
+char *articolo_getTesto(const Articolo * const unArticolo)
+{
+  return unArticolo->testo;
+}
