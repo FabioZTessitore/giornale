@@ -15,7 +15,7 @@ typedef struct articolo Articolo;
 
 Articolo articolo_make(const char * const ilTitolo, const char * const ilTesto);
 void articolo_dump(const Articolo * const unArticolo);
-char *articolo_getTitolo(const Articolo * const unArticolo);
-char *articolo_getTesto(const Articolo * const unArticolo);
+const char *articolo_getTitolo(const Articolo * const unArticolo);
+const char *articolo_getTesto(const Articolo * const unArticolo);
 
 #endif
