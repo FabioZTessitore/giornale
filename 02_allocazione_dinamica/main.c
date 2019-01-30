@@ -20,6 +20,9 @@ int main()
 
   giornale_dump(g);
 
+  articolo_destroy(&a1);
+  articolo_destroy(&a2);
+  pagina_destroy(&p);
   giornale_destroy(&g);
 
   return 0;

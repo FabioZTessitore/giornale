@@ -35,12 +35,12 @@ void pagina_destroy(Pagina **unaPagina)
   *unaPagina = NULL;
 }
 
-void pagina_inserisciArticolo(Pagina * const unaPagina, Articolo * const unArticolo)
+void pagina_inserisciArticolo(Pagina * const unaPagina, const Articolo * const unArticolo)
 {
   if (unaPagina->nArticoli >= PAGINA_MAX_ARTICOLI)
     return;
 
-  unaPagina->articoli[ unaPagina->nArticoli ] = unArticolo;
+  unaPagina->articoli[ unaPagina->nArticoli ] = articolo_clone(unArticolo);
   unaPagina->nArticoli++;
 }
 

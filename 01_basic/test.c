@@ -144,7 +144,7 @@ void test_PaginaCopy()
 
 void test_PaginaMaxArticoli()
 {
-  Pagina pag;
+  Pagina pag = pagina_make();
   Articolo art = articolo_make("Titolo", "Testo");
   int i;
   for (i = 0; i < PAGINA_MAX_ARTICOLI; i++) {
@@ -153,7 +153,6 @@ void test_PaginaMaxArticoli()
 
   CU_ASSERT_EQUAL(pag.nArticoli, PAGINA_MAX_ARTICOLI);
 
-  
   pagina_inserisciArticolo(&pag, &art);
   CU_ASSERT_EQUAL(pag.nArticoli, PAGINA_MAX_ARTICOLI);
 }

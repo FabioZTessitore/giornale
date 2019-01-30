@@ -17,7 +17,7 @@ typedef struct giornale Giornale;
 
 Giornale *giornale_make(const char * const nomeGiornale);
 void giornale_destroy(Giornale **unGiornale);
-void giornale_inserisciPagina(Giornale * const unGiornale, Pagina * const unaPagina);
+void giornale_inserisciPagina(Giornale * const unGiornale, const Pagina * const unaPagina);
 void giornale_dump(const Giornale * const unGiornale);
 
 #endif

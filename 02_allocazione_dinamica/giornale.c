@@ -37,12 +37,12 @@ void giornale_destroy(Giornale **unGiornale)
   *unGiornale = NULL;
 }
 
-void giornale_inserisciPagina(Giornale * const unGiornale, Pagina * const unaPagina)
+void giornale_inserisciPagina(Giornale * const unGiornale, const Pagina * const unaPagina)
 {
     if (unGiornale->nPagine >= GIORNALE_MAX_PAGINE)
       return;
 
-    unGiornale->pagine[ unGiornale->nPagine ] = unaPagina;
+    unGiornale->pagine[ unGiornale->nPagine ] = pagina_clone(unaPagina);
     unGiornale->nPagine++;
 }
 

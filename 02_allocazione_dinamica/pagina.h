@@ -16,7 +16,7 @@ typedef struct pagina Pagina;
 
 Pagina *pagina_make();
 void pagina_destroy(Pagina **unaPagina);
-void pagina_inserisciArticolo(Pagina * const unaPagina, Articolo * const unArticolo);
+void pagina_inserisciArticolo(Pagina * const unaPagina, const Articolo * const unArticolo);
 void pagina_dump(const Pagina * const unaPagina);
 Pagina *pagina_clone(const Pagina * const srcPagina);
 
